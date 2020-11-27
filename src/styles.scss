@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+.wrapper {
+  min-height: 100%;
+  max-width: 1140px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+body {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+
+  span.title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.875;
+    margin: 0;
+  }
+
+  span.label {
+    font-size: 18px;
+    font-size: 1.3rem;
+    line-height: 1.875;
+    margin: 0;
+  }
+}

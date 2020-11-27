@@ -1,0 +1,31 @@
+<div class="sub" id="contact">
+  <!-- <a href="#" class="close"><i class="fa fa-times"></i></a> -->
+  <span class="label">subscribe for updates (:</span>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field [color]="email.valid && 'accent'" class="email-input">
+      <input
+        matInput
+        formControlName="email"
+        type="email"
+        autocomplete="off"
+      />
+
+      <mat-error *ngIf="email.invalid && email.dirty">
+        email address please (:
+      </mat-error>
+    </mat-form-field>
+
+    <button
+    mat-raised-button
+    color="accent"
+    type="submit"
+    [disabled]="form.invalid"
+  >
+    send it
+  </button>
+  </form>
+
+  <ng-container *ngIf="sent">
+    <span>thanks for subscribing!</span>
+  </ng-container>
+</div>

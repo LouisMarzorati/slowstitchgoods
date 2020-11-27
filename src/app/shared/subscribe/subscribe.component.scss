@@ -1,0 +1,27 @@
+.sub {
+  height: 20vh;
+  background-color: burlywood;
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border-radius: 0;
+  height: 52px;
+}
+
+.email-input {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
