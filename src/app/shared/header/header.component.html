@@ -1,17 +1,32 @@
 <header class="site-header">
-  <div class="wrapper site-header__wrapper">
-    <nav class="nav">
-      <button class="nav__toggle" aria-expanded="false" type="button">
-        menu
-      </button>
+  <div class="site-header__strip title-subtext">
+    this is optional for promo codes or current updates
+  </div>
+  <div class="site-header__wrapper">
+    <a routerLink="/home" class="brand">Slow Stitch Goods <img src="/assets/knit.svg"/></a>
+    <nav class="nav nav-title">
+      <div class="nav__toggle" aria-expanded="false" type="button" id="nav__toggle">
+        <svg *ngIf="!selected"
+          (click)="selected = !selected"
+         xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+        <svg *ngIf="selected"
+          (click)="selected = !selected"
+          xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </div>
       <ul class="nav__wrapper">
-        <li class="nav__item"><a routerLink="/home" routerLinkActive="active">home</a></li>
-        <li class="nav__item"><a routerLink="/about" routerLinkActive="active">about</a></li>
-      </ul>
-      <a routerLink="/home" class="brand">Slow Stitch Goods</a>
-      <ul class="nav__wrapper">
-        <li class="nav__item"><a routerLink="/stitches" routerLinkActive="active">stitches</a></li>
-        <li class="nav__item"><a routerLink="/contact" routerLinkActive="active">contact</a></li>
+        <li class="nav__item"><a routerLink="/home" routerLinkActive="active" (click)="manualToggle()">home</a></li>
+        <li class="nav__item"><a routerLink="/about" routerLinkActive="active" (click)="manualToggle()">about</a></li>
+        <li class="nav__item"><a routerLink="/stitches" routerLinkActive="active" (click)="manualToggle()">stitches</a></li>
+        <li class="nav__item"><a routerLink="/contact" routerLinkActive="active" (click)="manualToggle()">contact</a></li>
       </ul>
     </nav>
   </div>

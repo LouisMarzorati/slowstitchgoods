@@ -1,0 +1,20 @@
+$small: 650px;
+
+.image-main {
+  display: flex;
+  width: 100%;
+}
+
+.image-row {
+
+  @media (max-width: $small) {
+    flex-direction: column;
+  }
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    margin: 1rem .5rem;
+  }
+}

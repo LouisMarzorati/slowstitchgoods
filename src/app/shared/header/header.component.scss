@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 $small: 650px;
-
 a {
   text-decoration: none;
   color: rgb(34,34,34);
@@ -14,6 +13,9 @@ a {
 }
 
 .active {
+  @media screen and (max-width: $small) {
+    color: #fff !important;
+  }
   color: burlywood !important;
 }
 
@@ -28,28 +30,53 @@ ul {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -3px 1px 7px #00000059;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.75rem;
   font-family: 'proxima-nova', sans-serif;
   margin: 0 2rem;
+
+  img {
+    width: 25px;
+    height: auto;
+    margin: 0 0 0 1rem;
+  }
 }
 
 .site-header {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
-}
 
-.site-header__wrapper {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 
-  @media (min-width: $small) {
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
+    min-height: 100%;
+    margin: 2rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__strip {
+    @media screen and (max-width: $small) {
+      font-size: 1rem;
+      line-height: normal;
+      white-space: pre-wrap;
+    }
+    display: flex;
     align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    justify-content: center;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #D1A56B;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
   }
 }
 
@@ -63,8 +90,7 @@ ul {
     top: 100%;
     right: 0;
     left: 0;
-    z-index: -1;
-    background-color: #d9f0f7;
+    background-color: #D1A56B;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-100%);
@@ -92,6 +118,10 @@ ul {
     display: block;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+
+    svg {
+      width: 3rem;
+      height: auto;
+    }
   }
 }

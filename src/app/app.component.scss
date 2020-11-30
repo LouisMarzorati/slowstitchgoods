@@ -15,6 +15,17 @@ p {
   flex: 1;
 }
 
+.lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   display: flex;
   margin: 32px auto 32px;
@@ -22,6 +33,7 @@ p {
   max-width: 960px;
   flex-direction: column;
   align-items: center;
+  min-height: 100%;
 }
 
 /* Responsive Styles */
