@@ -10,11 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { KnitComponent } from './knit/knit.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 
 
-const components = [HeaderComponent, FooterComponent, SubscribeComponent, KnitComponent]
+const components = [HeaderComponent, FooterComponent, SubscribeComponent]
 const modules = [
   CommonModule,
   MatFormFieldModule,
@@ -28,7 +27,7 @@ const modules = [
   RouterModule
 ]
 @NgModule({
-  declarations: [...components, KnitComponent ],
+  declarations: [...components ],
   imports: [...modules],
   exports: [
     ...components,

@@ -21,6 +21,12 @@ $small: 650px;
   align-items: center;
   justify-content: space-between;
   img {
+    width: 304px;
+    height: 304px;
     margin: 1rem 0;
   }
+}
+
+img {
+  border-radius: 2rem;
 }
